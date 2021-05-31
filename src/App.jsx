@@ -7,11 +7,20 @@ function App() {
     const cash = useSelector(state => state.cash)
     console.log(cash)
 
+    const addCash = () => {
+        dispatch({type:"ADD_CASH", payload: 5})
+    }
+
+    const getCash = () => {
+        dispatch({type:"GET_CASH", payload: 5})
+    }
+
   return (
     <div className={'app'}>
+      <div style={{fontSize:"3rem"}}>{cash}</div>
       <div style={{display:"flex"}}>
-        <button>Пополнить счет</button>
-        <button>Снять со счета</button>
+        <button onClick={() => addCash()}>Пополнить счет</button>
+        <button onClick={() => getCash()}>Снять со счета</button>
       </div>
     </div>
   );

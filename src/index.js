@@ -5,7 +5,7 @@ import {createStore} from "redux";
 import {Provider} from "react-redux";
 
 const defaultState = {
-    cash: 0,
+    cash: 5,
 }
 
 
